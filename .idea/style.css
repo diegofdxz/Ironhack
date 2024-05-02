@@ -16,7 +16,7 @@ body {
     display: block;
     margin: 0 auto;
     border: 4px solid #2e5729; /* Borde oscuro alrededor del canvas */
-    background-color: #5b995f; /* Nuevo color de fondo del tablero */
+    background-color: #66a96a; /* Nuevo color de fondo del tablero */
     width: 500px; /* Tamaño del canvas */
     height: 500px; /* Tamaño del canvas */
 }
