@@ -2,8 +2,8 @@ const container = document.getElementById('container');
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-const tamañoContenedor = 420; // Tamaño del contenedor
-const tamañoCuadrícula = tamañoContenedor / 20; // Tamaño de cada cuadrado en la cuadrícula
+const tamañoContenedor = 420;
+const tamañoCuadrícula = tamañoContenedor / 20;
 
 canvas.width = tamañoContenedor;
 canvas.height = tamañoContenedor;
@@ -48,7 +48,7 @@ function generarComida() {
 
 function verificarColisión() {
     const cabeza = serpiente[0];
-    // Comprueba si la cabeza de la serpiente está fuera del límite del área de juego
+    // Comprueba si la cabeza de la serpiente está fuera del área de juego
     if (cabeza.x < 0 || cabeza.x >= tamañoContenedor / tamañoCuadrícula || cabeza.y < 0 || cabeza.y >= tamañoContenedor / tamañoCuadrícula) {
         return true;
     }

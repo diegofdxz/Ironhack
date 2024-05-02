@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #2e5729; /* Fondo verdoso */
+    background-color: #2e5729;
 }
 
 #container {
@@ -15,10 +15,10 @@ body {
 #gameCanvas {
     display: block;
     margin: 0 auto;
-    border: 4px solid #2e5729; /* Borde oscuro alrededor del canvas */
-    background-color: #66a96a; /* Nuevo color de fondo del tablero */
-    width: 500px; /* Tamaño del canvas */
-    height: 500px; /* Tamaño del canvas */
+    border: 4px solid #2e5729;
+    background-color: #66a96a;
+    width: 500px;
+    height: 500px;
 }
 
 
@@ -31,7 +31,7 @@ body {
 
 #controls button {
     margin: 0 5px;
-    background-color: #336633; /* Botones de control en tono verde */
+    background-color: #336633;
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -43,7 +43,7 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-    color: #fff; /* Color blanco para el marcador de puntuación */
+    color: #fff;
 }
 
 #gameOverModal {
@@ -59,7 +59,7 @@ body {
 }
 
 .modal-content {
-    background-color: #fff; /* Fondo blanco para el modal */
+    background-color: #fff;
     margin: 15% auto;
     padding: 20px;
     border-radius: 8px;
