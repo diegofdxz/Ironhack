@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2e5729; /* Fondo verdoso */
+}
+
+#container {
+    position: relative;
+}
+
+#gameCanvas {
+    display: block;
+    margin: 0 auto;
+    border: 4px solid #2e5729; /* Borde oscuro alrededor del canvas */
+    background-color: #5b995f; /* Nuevo color de fondo del tablero */
+    width: 500px; /* Tamaño del canvas */
+    height: 500px; /* Tamaño del canvas */
+}
+
+
+#controls {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#controls button {
+    margin: 0 5px;
+    background-color: #336633; /* Botones de control en tono verde */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff; /* Color blanco para el marcador de puntuación */
+}
+
+#gameOverModal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff; /* Fondo blanco para el modal */
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

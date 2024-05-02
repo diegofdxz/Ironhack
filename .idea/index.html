@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de la Serpiente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+    <canvas id="gameCanvas"></canvas>
+</div>
+<div id="controls">
+    <button id="startButton">Iniciar</button>
+    <button id="stopButton">Detener</button>
+    <button id="resetButton">Reiniciar</button>
+</div>
+<div id="score">
+    <h2>Puntuación:</h2>
+    <p id="currentScore">0</p>
+</div>
+<div id="gameOverModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¡Juego Terminado!</h2>
+        <p>Tu puntuación: <span id="finalScore">0</span></p>
+        <label for="playerName">Ingresa tu nombre:</label>
+        <input type="text" id="playerName" name="playerName">
+        <button id="submitScore">Enviar</button>
+    </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
