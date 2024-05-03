@@ -24,9 +24,6 @@
         <span class="close">&times;</span>
         <h2>¡Juego Terminado!</h2>
         <p>Tu puntuación: <span id="finalScore">0</span></p>
-        <label for="playerName">Ingresa tu nombre:</label>
-        <input type="text" id="playerName" name="playerName">
-        <button id="submitScore">Enviar</button>
     </div>
 </div>
 <div id="instructions">
@@ -34,6 +31,14 @@
     <p>Usa las teclas de flecha para mover la serpiente.</p>
     <p>Come la comida (los cuadrados rojos) para ganar puntos.</p>
     <p>Evita chocar con los bordes del tablero o con la serpiente misma.</p>
+</div>
+<div id="difficulty">
+    <label for="speed">Velocidad:</label>
+    <select id="speed">
+        <option value="100">Facil</option>
+        <option value="75">Intermedio</option>
+        <option value="50">Dificil</option>
+    </select>
 </div>
 <script src="game.js"></script>
 </body>

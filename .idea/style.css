@@ -101,3 +101,16 @@ body {
     font-size: 14px;
     margin-bottom: 5px;
 }
+
+#difficulty {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#difficulty label {
+    margin-right: 5px;
+}

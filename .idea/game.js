@@ -8,9 +8,9 @@ const tamañoCuadrícula = tamañoContenedor / 20;
 canvas.width = tamañoContenedor;
 canvas.height = tamañoContenedor;
 
-const velocidadSerpiente = 100;
+let snakeSpeed = 100; // Velocidad predeterminada
 
-let serpiente = [{ x: 10, y: 10 }];
+const serpiente = [{ x: 10, y: 10 }];
 let comida = { x: 15, y: 15 };
 let dx = 0;
 let dy = 0;
@@ -65,7 +65,8 @@ function juegoTerminado() {
 function iniciarJuego() {
     puntuación = 0;
     document.getElementById('currentScore').textContent = puntuación;
-    gameLoop = setInterval(actualizar, velocidadSerpiente);
+    snakeSpeed = parseInt(document.getElementById('speed').value);
+    gameLoop = setInterval(actualizar, snakeSpeed);
 }
 
 function detenerJuego() {
@@ -74,24 +75,20 @@ function detenerJuego() {
 
 function reiniciarJuego() {
     clearInterval(gameLoop);
-    serpiente = [{ x: 10, y: 10 }];
+    serpiente.length = 0; // Vaciamos el array de la serpiente
+    serpiente.push({ x: 10, y: 10 }); // Agregamos la cabeza de la serpiente en su posición inicial
     dx = 0;
     dy = 0;
-    generarComida();
-    actualizar();
-    document.getElementById('gameOverModal').style.display = 'none';
-}
-
-function enviarPuntuación() {
-    const nombreJugador = document.getElementById('playerName').value;
-    alert(`Puntuación enviada!\nJugador: ${nombreJugador}\nPuntuación: ${puntuación}`);
-    reiniciarJuego();
+    generarComida(); // Generamos nueva comida
+    puntuación = 0; // Reiniciamos la puntuación a cero
+    document.getElementById('currentScore').textContent = puntuación; // Actualizamos el marcador de puntuación
+    actualizar(); // Volvemos a dibujar el estado del juego
+    document.getElementById('gameOverModal').style.display = 'none'; // Ocultamos el modal de juego terminado
 }
 
 document.getElementById('startButton').addEventListener('click', iniciarJuego);
 document.getElementById('stopButton').addEventListener('click', detenerJuego);
 document.getElementById('resetButton').addEventListener('click', reiniciarJuego);
-document.getElementById('submitScore').addEventListener('click', enviarPuntuación);
 
 document.addEventListener('keydown', e => {
     switch (e.key) {
@@ -131,3 +128,8 @@ function actualizar() {
         juegoTerminado();
     }
 }
+
+// Cerrar el modal al hacer clic en el botón "X"
+document.querySelector('.close').addEventListener('click', () => {
+    document.getElementById('gameOverModal').style.display = 'none';
+});
