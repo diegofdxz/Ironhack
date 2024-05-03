@@ -8,7 +8,7 @@ const tamañoCuadrícula = tamañoContenedor / 20;
 canvas.width = tamañoContenedor;
 canvas.height = tamañoContenedor;
 
-let snakeSpeed = 100; // Velocidad predeterminada
+let snakeSpeed = 100;
 
 const serpiente = [{ x: 10, y: 10 }];
 let comida = { x: 15, y: 15 };
@@ -129,7 +129,6 @@ function actualizar() {
     }
 }
 
-// Cerrar el modal al hacer clic en el botón "X"
 document.querySelector('.close').addEventListener('click', () => {
     document.getElementById('gameOverModal').style.display = 'none';
 });
